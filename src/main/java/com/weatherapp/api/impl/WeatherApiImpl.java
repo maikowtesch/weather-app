@@ -30,9 +30,9 @@ public class WeatherApiImpl implements WeatherApi {
      * Finds current weather data for a location.
      */
     @Override
-    public CurrentWeatherDTO getCurrentWeatherByLocation(String location) throws WeatherApiException, WeatherApiLocationNotFoundException {
+    public CurrentWeatherDTO getCurrentWeatherByLocation(String location) throws WeatherApiException {
         try {
-            // Calls the Open Weather api that finds current weather data
+            // Calls the Open Weather api to find current weather data
             CurrentWeatherApiDTO apiDTO = openWeatherClient.currentWeatherData(location, METRIC, openWeatherKey);
 
             // Translates the response into the core DTO

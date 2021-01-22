@@ -22,6 +22,8 @@
         <okhttp.version>3.4.2</okhttp.version>
         <cloud-dependencies.version>Hoxton.SR9</cloud-dependencies.version>
         <lombok.version>1.18.10</lombok.version>
+        <junit.version>4.13.1</junit.version>
+        <mockito-core.version>3.7.7</mockito-core.version>
     </properties>
 
     <dependencies>
@@ -52,7 +54,24 @@
             <version>${lombok.version}</version>
             <scope>provided</scope>
         </dependency>
-    </dependencies>
 
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>${junit.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-core</artifactId>
+            <version>${mockito-core.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
 
 </project>

@@ -5,7 +5,7 @@ import feign.Response;
 import feign.codec.ErrorDecoder;
 
 /**
- * Decodes de HTTP response from the Feign Client in case there's an error.
+ * Decodes the HTTP error response that comes from the Feign Client.
  */
 public class OpenWeatherErrorDecoder implements ErrorDecoder {
     @Override

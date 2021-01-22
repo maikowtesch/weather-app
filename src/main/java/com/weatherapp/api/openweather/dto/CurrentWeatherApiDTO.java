@@ -6,7 +6,7 @@ import lombok.Setter;
 import java.util.List;
 
 /**
- * DTO for the Current Weather Data endpoint.
+ * DTO for the Current Weather Data endpoint (from the Open Weather API).
  */
 @Getter
 @Setter

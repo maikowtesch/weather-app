@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 /**
- * Feign Client responsible for connecting with the Open Weather API.
+ * Feign Client responsible for connecting to the Open Weather API.
  */
 @FeignClient(
         value = "openweather-api",

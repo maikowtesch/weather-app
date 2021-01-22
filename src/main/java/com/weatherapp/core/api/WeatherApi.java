@@ -15,5 +15,5 @@ public interface WeatherApi {
      * @throws WeatherApiException
      * @throws WeatherApiLocationNotFoundException
      */
-    CurrentWeatherDTO getCurrentWeatherByLocation(String location) throws WeatherApiException, WeatherApiLocationNotFoundException;
+    CurrentWeatherDTO getCurrentWeatherByLocation(String location) throws WeatherApiLocationNotFoundException, WeatherApiException;
 }

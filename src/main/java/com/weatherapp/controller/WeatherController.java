@@ -20,6 +20,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class WeatherController {
 
     public static final String CITY_NOT_FOUND = "CITY_NOT_FOUND";
+
     @Autowired
     private WeatherService weatherService;
 
@@ -31,7 +32,9 @@ public class WeatherController {
     @GetMapping(value="/current", produces="application/json")
     public ResponseEntity<Object> current(@RequestParam("location") String location) {
         try {
-            return ResponseEntity.ok(this.weatherService.getCurrentWeatherInfo(location));
+
+            return ResponseEntity.ok(this.weatherService.currentWeatherInformation(location));
+
         } catch (WeatherApiLocationNotFoundException e) {
             return new ResponseEntity<>(CITY_NOT_FOUND, HttpStatus.NOT_FOUND);
         } catch (WeatherApiException e) {
